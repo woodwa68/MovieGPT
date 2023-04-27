@@ -16,9 +16,9 @@ const Card = (props: any): JSX.Element => {
   const [w, setw] = useState<number>(0);
   const [h, seth] = useState(0);
   const [actualDimensions, setActualDimensions] = useState<any>({});
-  if (!props.props) return <></>;
+  if (!props.card) return <></>;
 
-  const style = props.props.props.style;
+  const style = props.card.props.style;
   const threshold = 50;
   let scale = props.pinchData ? props.pinchData * 0.8 : 1.0;
   const padding = 4;
@@ -48,8 +48,8 @@ const Card = (props: any): JSX.Element => {
     scale = scale * closeFactor;
   }
 
-  if (props.props.poster && !w){
-    Image.getSize(props.props.poster, (wi, he) => {
+  if (props.card.poster && !w){
+    Image.getSize(props.card.poster, (wi, he) => {
       setw(wi);
       seth(he);
     });
@@ -75,16 +75,16 @@ const Card = (props: any): JSX.Element => {
             padding: 0,
           }}
         >
-          {props.props.props.children}
+          {props.card.props.children}
         </Text>
       </View>
     ) : (
       <View
-        id={'' + props.props.props.left}
+        id={'' + props.card.props.left}
         style={{
           flexDirection: 'column',
           zIndex: 5 / scale,
-          ...props.props.props.style,
+          ...props.card.props.style,
           left: style.left - style.width / (scale * 2),
           top: style.top - (style.height - props.dimensionData.minHeight) / (scale * 2),
           backgroundColor: 'rgba(132,132,132,' + 2.5 * (1 - closeFactor) + ')',
@@ -108,14 +108,14 @@ const Card = (props: any): JSX.Element => {
               textAlign: 'center',
               color: 'white',
               fontSize: 12 / scale,
-              borderColor: 'white',
+              borderColor: props.color,
               borderWidth: 1,
               width: actualDimensions.w / scale + 10,
               backgroundColor: 'rgba(0,0,0,.5)',
               marginTop: -4,
             }}
           >
-            {props.props.props.children}
+            {props.card.props.children}
           </Text>
         </View>
         {configs.debug && (
@@ -125,10 +125,10 @@ const Card = (props: any): JSX.Element => {
         )}
         <View style={{ opacity: 2 * (1 - closeFactor) }}>
           <View style={{ flexDirection: 'row' }}>
-            {props.props.poster && (
+            {props.card.poster && (
               <Image
                 source={{
-                  uri: props.props.poster,
+                  uri: props.card.poster,
                   // cache: 'only-if-cached',
                 }}
                 style={{
@@ -149,7 +149,7 @@ const Card = (props: any): JSX.Element => {
                 paddingHorizontal: 5,
               }}
             >
-              {props.props.overview}
+              {props.card.overview}
             </Text>
           </View>
           <View
@@ -170,12 +170,12 @@ const Card = (props: any): JSX.Element => {
             >
               <Text
                 style={{
-                  lineHeight: -16 * (1 / scale),
+                
                   fontSize: 7 * (1 / scale),
                   color: 'yellow',
                 }}
               >
-                {(Math.round(props.props.vote_average * 100) / 100).toFixed(2)}
+                {(Math.round(props.card.vote_average * 100) / 100).toFixed(2)}
               </Text>
               <Text
                 style={{
@@ -236,7 +236,9 @@ const Card = (props: any): JSX.Element => {
                     enableVibrateFallback: true,
                     ignoreAndroidSystemSettings: false,
                   });
-                  const name = props.props.props.children.toLowerCase().replaceAll(' ', '-');
+                  debugger
+                 
+                  const name = props.card.props.children.toLowerCase().split(' ').join('-');
                   axios.get('https://1moviestv.com/search/' + name).then((r) => {
                     const index = r.data.indexOf('movie/watch-' + name);
                     const url = r.data.substring(index, r.data.indexOf('"', index));

@@ -226,13 +226,14 @@ const App = (): JSX.Element => {
               })}
           </Svg>
           {cards &&
-            cards.map((card: any) => {
+            cards.map((card: any,id:number) => {
               if (card.props.style === 'none') return null;
               return (
                 <Card
                   key={card.props.children}
                   pinchData={zoomL.value}
-                  props={card}
+                  card={card}
+                  color={colors[id % colors.length]}
                   focus={(movieCard: any) => {
                     setSearch(movieCard.props.props.children);
                     setSearchCount(searchCount + 1);
