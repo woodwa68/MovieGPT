@@ -1,11 +1,10 @@
-# MovieGPT
- 
-<image src="RPReplay_Final1681235196_MP4_AdobeExpress.gif" />
+
+
+
+<img style="padding:30px" src="RPReplay_Final1681235196_MP4_AdobeExpress.gif" /><img style="width:30%;padding:30px" src="Screenshot_20230501-154651.png" /><div style="padding:10px;display:inline; height:auto"><img style="width:30%"  src="Screenshot_20230501-154714.png" /></div>
+
 
 <p align="center">
-  <a href="https://apps.apple.com/us/app/oneneighbor/id1551432157?app=itunes&ign-mpt=uo%3D4">
-    <img width="150px" style="border-radius:20px;" src="android/app/src/main/res/playstore-icon.png">
-  </a>
   <h1 align="center">MovieGPT</h1>
 </p>
 
