@@ -72,15 +72,15 @@
 
       Or you can build using command line :
 
-      ```npm i```
+      ```yarn i```
 
       ```cd ios && pod install```
 
-      ```npm run ios```
+      ```yarn run ios```
 
     
    - To run Android, launch a emulator (virtual device)
-    Run ```npm run android``` in the terminal.
+    Run ```yarn run android``` in the terminal.
 
 
 
@@ -102,15 +102,15 @@ If there is a "ndk" folder, then rename to "ndk-bundle"
 
 1. iOS
   - Launch iPhone 11 Pro Max simulator
-  - Run ```npm run e2e:ios``` in terminal
+  - Run ```yarn run e2e:ios``` in terminal
 Then, after building by detox, you will see testing on iPhone 11 Pro Max
 
 2. Android
 - Launch  Pixel_3a_API_30  emulator
-- Run ```npm run e2e:android``` in terminal
+- Run ```yarn run e2e:android``` in terminal
 
 If you want to change the emulator or simulator for testing, then you need to update device.type parameter in .detoxrc.json.
-Also, you can see the available emulators and simulators with command line-```npm run emulators``` and ```npm run simulators```
+Also, you can see the available emulators and simulators with command line-```yarn run emulators``` and ```yarn run simulators```
 
 
 
