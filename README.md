@@ -1,12 +1,12 @@
 
 
-
-<img style="padding:30px" src="RPReplay_Final1681235196_MP4_AdobeExpress.gif" /><img style="width:30%;padding:30px" src="Screenshot_20230501-154651.png" /><div style="padding:10px;display:inline; height:auto"><img style="width:30%"  src="Screenshot_20230501-154714.png" /></div>
-
-
 <p align="center">
   <h1 align="center">MovieGPT</h1>
 </p>
+
+<img style="padding:30px" src="RPReplay_Final1681235196_MP4_AdobeExpress.gif" />&nbsp;&nbsp;&nbsp;<img style="width:30%;padding:30px" src="Screenshot_20230501-154651.png" />&nbsp;&nbsp;&nbsp;<img style="width:30%;padding:50px"  src="Screenshot_20230501-154714.png" />
+
+
 
 
 
