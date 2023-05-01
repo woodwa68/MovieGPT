@@ -4,7 +4,7 @@
   <h1 align="center">MovieGPT</h1>
 </p>
 
-<img style="padding:30px;height:600px !important" src="RPReplay_Final1681235196_MP4_AdobeExpress.gif" />&nbsp;&nbsp;&nbsp;<img style="width:30%;padding:30px;height:600px" src="Screenshot_20230501-154651.png" />&nbsp;&nbsp;&nbsp;<img style="width:30%;padding:50px;height:600px"  src="Screenshot_20230501-154714.png" />
+<img style="padding:30px;height:600px !important" src="RPReplay_Final1681235196_MP4_AdobeExpress.gif" />&nbsp;&nbsp;&nbsp;<img style="padding:30px;height:600px" src="Screenshot_20230501-154651.png" />&nbsp;&nbsp;&nbsp;<img style="padding:50px;height:600px"  src="Screenshot_20230501-154714.png" />
 
 
 
