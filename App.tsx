@@ -235,7 +235,7 @@ const App = (): JSX.Element => {
                   card={card}
                   color={colors[id % colors.length]}
                   focus={(movieCard: any) => {
-                    setSearch(movieCard.props.props.children);
+                    setSearch(movieCard.card.props.children);
                     setSearchCount(searchCount + 1);
                     movieCard.props.props.style.left;
                   }}
